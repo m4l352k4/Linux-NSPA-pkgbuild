@@ -46,9 +46,6 @@ _spf_enable=y
 # Enable Linux Random Number Generator
 _lrng_enable=
 
-# Apply Kernel automatic Optimization
-_use_auto_optimization=y
-
 # disable debug to lower the size of the kernel
 _disable_debug=
 
@@ -105,7 +102,6 @@ source=(
   "0000-patch-6.15-rc1-rt1.patch"
   "config"
   "config_surface7"
-  "auto-cpu-optimization.sh"
   "0000-Add_the_CONFIG_X86_NATIVE_CPU_option.patch"
   "0001-ClearLinux-patchwork.patch"
   "0002-sched-fair-Compile-out-NUMA-code-entirely-when-NUMA-.patch"
@@ -180,10 +176,6 @@ prepare() {
   else
       cp ../config .config
   fi
-
-    if [ -n "$_use_auto_optimization" ]; then
-        "${srcdir}"/auto-cpu-optimization.sh
-    fi
 
     if [ -n "$_NUMAdisable" ]; then
         echo "Disabling NUMA from kernel config..."
@@ -495,7 +487,6 @@ sha256sums=('36da24c77bff72ec8b5df304ca92fb196cb93bc2a2030c07d2124905a35b2da2'
             '8149dd3d1e3aeed3d2a21b8e5b1668f262a9c397719d5852468334697e0f4982'
             '185b37e358eb56af27de5a46da7e800ab00a8f5ec31315406a90e78e83a426ae'
             '5be543c101bc83231fb1946142c6a6d659df204074b17ace649760b70ff6a301'
-            'e1d45b5842079a5f0f53d7ea2d66ffa3f1497766f3ccffcf13ed00f1ac67f95e'
             '0e1259ee5e8481a84dd11408421d82ad419e17e2f84b146578ceb83a7427422f'
             'eff62970ee3636da157ad868d63f33b891df5114ce25e12319e7b28bf8fc2a29'
             '5c2a0c96dfa0909f1def1bf9ef0ad9b7e1b90263ca751a2cbd0956d009f0f7cb'
