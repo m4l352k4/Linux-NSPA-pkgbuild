@@ -7,6 +7,10 @@ elif [[ ${MARCH} == "ZNVER2" ]]; then
     MARCH="ZEN2"
 elif [[ ${MARCH} == "ZNVER3" ]]; then
     MARCH="ZEN3"
+elif [[ ${MARCH} == "ZNVER4" ]]; then
+    MARCH="ZEN4"
+elif [[ ${MARCH} == "ZNVER5" ]]; then
+    MARCH="ZEN5"
 elif [[ ${MARCH} == "BDVER1" ]]; then
     MARCH="BULLDOZER"
 elif [[ ${MARCH} == "BDVER2" ]]; then
