@@ -160,6 +160,9 @@ prepare() {
     elif [[ $src == "201-sched-rt-Disable_RT_throttling-CFS-DL_Servers.patch" && $_no_RT_throttle == "y" ]]; then
       echo "Applying patch $src..."
       patch -Np1 < "../$src"
+    elif [[ $src == "0030-Microsoft_Surface_Support-6.12.patch" && $_config_Surface7 == "y" ]]; then
+      echo "Applying patch $src..."
+      patch -Np1 < "../$src"
     elif [[ $src == "9999-sched_feat-compile-time.patch" && $_sched_feat_comp == "y" ]]; then
       echo "Applying patch $src..."
       patch -Np1 < "../$src"
