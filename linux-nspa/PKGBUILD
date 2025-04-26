@@ -113,8 +113,8 @@ source=(
   "0011-iosched-option_to_set_ADIOS_default.patch"
   "0011-kt-smp-migrate_disable_in_smp_call_function_single_async.patch"
   "0012-kt-rtmutex-no-rcu-lock-while-spinning.patch"
-  "0022-kt-vm-mm_optimizations.patch"
   "0019-hid-wacom-Silence_log_spam.patch"
+  "0022-kt-vm-mm_optimizations.patch"
   "0024-Kernel_tuning-CONFIG_NSPA.patch"
   "0030-Microsoft_Surface_Support-6.12.patch"
   "0041-sched-fair-Dont_force_smt_balancing_when_CPU_has_spare.patch"
@@ -499,8 +499,8 @@ sha256sums=('36da24c77bff72ec8b5df304ca92fb196cb93bc2a2030c07d2124905a35b2da2'
             '623653a9ffc8323ce2f3393a1043d5e7d09196566058f6b7b22bb63297ccd4b5'
             '9c2dee249ba6fd79eb8d8142a4591e6a64d88d44d2bf49d486499f70c31b5bf3'
             '53bc1fc5f0c44072222c67ce5fa53a729643d5269d391b742bab1834bfe4d313'
-            '5bddf0faf1194b7c759683290b1af786c79e0dcd79037e95b956772ef3ff5542'
             '59b410a6cbe6a33c91f54139e4a710fbd2dc29e771d60d49b7ec715d3d7e12fe'
+            '5bddf0faf1194b7c759683290b1af786c79e0dcd79037e95b956772ef3ff5542'
             '17ff4ea2bf922badba9a6e2451d930d303ae9f55733900194f4e345c7d178b9a'
             '3f4165bf93ef02dcf35b704fb5483fd5460156150a831f762f1454911aee16a6'
             'd670d04c03e41f3dbc0ec9c49e50ba2231f610d8d34cb46e341baef3a8002a27'
