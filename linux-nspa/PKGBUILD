@@ -22,7 +22,7 @@ _use_current=
 
 # Microsoft Surface 7 specific config
 # unset =y to use generic kernel config (builds everything)
-_config_Surface7=y
+_config_Surface7=
 
 # NUMA is optimized for multi-socket motherboards.
 # A single multi-core CPU actually runs slower with NUMA enabled.
@@ -70,11 +70,11 @@ _tickrate=full
 # using trusted VMs - I'm not overly worried about this vulnerability.
 #
 # !!! WARNING: Do NOT enable this: may have your system !!!
-_vmx_hack=y
+_vmx_hack=
 
 # Disable RT Throttling (!!! DANGER ZONE !!!)
 # Don't enable unless you know what you are doing.
-_no_RT_throttle=y
+_no_RT_throttle=
 
 # Enable converting sched_feat() into compile-time implementation
 # This allows the compiler to make better optimizations to scheduler
