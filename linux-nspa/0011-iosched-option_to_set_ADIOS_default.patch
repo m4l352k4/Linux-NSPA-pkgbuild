@@ -1,0 +1,41 @@
+Add config option for enabling ADIOS as default MQ I/O scheduler
+
+---
+ block/Kconfig.iosched | 7 +++++++
+ block/elevator.c      | 4 ++++
+ 2 files changed, 11 insertions(+)
+
+diff --git a/block/Kconfig.iosched b/block/Kconfig.iosched
+index 79fd5da5d..d89b92e63 100644
+--- a/block/Kconfig.iosched
++++ b/block/Kconfig.iosched
+@@ -25,6 +25,13 @@ config MQ_IOSCHED_ADIOS
+ 	  It aims to provide low latency for synchronous requests while
+ 	  maintaining high throughput for asynchronous requests and bulk I/O.
+ 
++config MQ_IOSCHED_DEFAULT_ADIOS
++	bool "Enable ADIOS I/O scheduler as default MQ I/O scheduler"
++	depends on MQ_IOSCHED_ADIOS
++	default n
++	help
++	  Enable the ADIOS I/O scheduler as the default scheduler for MQ I/O.
++
+ config IOSCHED_BFQ
+ 	tristate "BFQ I/O scheduler"
+ 	select BLK_ICQ
+diff --git a/block/elevator.c b/block/elevator.c
+index 4a24c3c80..7617a5b31 100644
+--- a/block/elevator.c
++++ b/block/elevator.c
+@@ -566,7 +566,11 @@ static struct elevator_type *elevator_get_default(struct request_queue *q)
+ 
+ 	if (q->nr_hw_queues != 1 &&
+ 	    !blk_mq_is_shared_tags(q->tag_set->flags))
++#if defined(CONFIG_MQ_IOSCHED_ADIOS) && defined(CONFIG_MQ_IOSCHED_DEFAULT_ADIOS)
++		return(elevator_find_get("adios"));
++#else
+ 		return NULL;
++#endif
+ 
+ #if defined(CONFIG_IOSCHED_BFQ)
+ 	return elevator_find_get("bfq");

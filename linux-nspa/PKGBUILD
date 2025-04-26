@@ -110,6 +110,7 @@ source=(
   "0008-mm-increase_max_map_count.patch"
   "0009-mm-le9uo-add-sysctl-knobs-for-protecting-the-workin.patch"
   "0010-iosched-introduce_ADIOS_IO_scheduler.patch"
+  "0011-iosched-option_to_set_ADIOS_default.patch"
   "0011-kt-smp-migrate_disable_in_smp_call_function_single_async.patch"
   "0012-kt-rtmutex-no-rcu-lock-while-spinning.patch"
   "0022-kt-vm-mm_optimizations.patch"
@@ -495,6 +496,7 @@ sha256sums=('36da24c77bff72ec8b5df304ca92fb196cb93bc2a2030c07d2124905a35b2da2'
             '925b3edafe5aae0e577a5a51f653ef0a93d4299c44e9dcba13882010d4bc58ee'
             'f9002afa9abad89fc4ccf19c1d780145439c6d6afce02fddda8b0130fd9691e1'
             '267d32958d0eaae229f4e3b6e34b6b48855f58bd0a0cfcf1371ad5847a3c3e51'
+            '623653a9ffc8323ce2f3393a1043d5e7d09196566058f6b7b22bb63297ccd4b5'
             '9c2dee249ba6fd79eb8d8142a4591e6a64d88d44d2bf49d486499f70c31b5bf3'
             '53bc1fc5f0c44072222c67ce5fa53a729643d5269d391b742bab1834bfe4d313'
             '5bddf0faf1194b7c759683290b1af786c79e0dcd79037e95b956772ef3ff5542'
