@@ -41,7 +41,7 @@ compare(Config& A, Config& B)
     for (const auto& a : A.data) {
         const auto& [key, val] = a;
         if (B.data.count(key)) common.emplace_back(key);
-        cout << key.c_str() << "\n";
+        cout << key.c_str() << "=" << val.c_str() << "\n";
     }
     cout << "\n";
 
@@ -50,7 +50,7 @@ compare(Config& A, Config& B)
     for (const auto& b : B.data) {
         const auto& [key, val] = b;
         if (A.data.count(key)) continue;
-        cout << key.c_str() << "\n";
+        cout << key.c_str() << "=" << val.c_str() << "\n";
     }
     cout << "\n";
 
