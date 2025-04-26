@@ -130,7 +130,6 @@ source=(
   "1110-add-acs-overrides_iommu.patch"
   "1112-sched-core-Skip_Superfluous_acquire_barrier_in_ttwu.patch"
   "1116-kt-pm-suspend_patches.patch"
-  "1119-mm-compaction-Skip_all_non-migratable_pages_during_scan.patch"
   "1120-RFC-Introduce-QPW-for-per-cpu-operations.patch"
   "1122-dma-buf-sync_file-Speed_up_ioctl_by_omitting_debug_names.patch"
   "1123-iwlwifi-mvm-allow_DTIM_periods_to_be_skipped.patch"
@@ -519,7 +518,6 @@ sha256sums=('36da24c77bff72ec8b5df304ca92fb196cb93bc2a2030c07d2124905a35b2da2'
             'f3e6c8c98ea5172f424971bc20f128c7f1f6416af6944f58dad1048ba4dff168'
             'a07a110ec5bf4ebcfa1fa04e446ca00145caf72cc3d28d3f5937361f1b4e2e11'
             '005cd66bbec398917e56c0f3f06eebaba9d7fc351c12b215e4e1acf13355e56d'
-            'cbcbd40d54e47b97bf44c305b2903f655c7afbf914a0d6c55fcf57ecf1c63713'
             '153060a602abfb32773533301cd06a1b43d43e782a0bb98c14019043ba9f767e'
             '3059893c86b3eee288edb6c7d958d84e92c67a7d8e55ad48a9470a2100b0a22e'
             'd02a7971e78702faee8625bdad452468b65db7606bc735c9257ff97d092a6b08'
