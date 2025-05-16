@@ -15,7 +15,7 @@ _makemenuconfig=
 # and the build time.
 #
 # More at this wiki page ---> https://wiki.archlinux.org/index.php/Modprobed-db
-_localmodcfg=
+_localmodcfg=y
 
 # Use the current kernel's .config file
 _use_current=
@@ -47,7 +47,7 @@ _spf_enable=y
 _lrng_enable=
 
 # disable debug to lower the size of the kernel
-_disable_debug=
+_disable_debug=y
 
 # Enable zram/zswap ZSTD compression
 _zstd_compression=y
