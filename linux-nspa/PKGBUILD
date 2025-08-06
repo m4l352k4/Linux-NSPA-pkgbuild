@@ -371,7 +371,7 @@ prepare() {
 
 build() {
   cd ${_srcname}
-  make ${BUILD_FLAGS[*]} -j3 all
+  make ${BUILD_FLAGS[*]} -j$(nproc) all
 }
 
 _package() {
