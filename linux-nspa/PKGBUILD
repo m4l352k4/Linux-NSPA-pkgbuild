@@ -350,7 +350,7 @@ prepare() {
     if [ -n "$_localmodcfg" ]; then
         if [ -e $HOME/.config/modprobed.db ]; then
             echo "Running Steven Rostedt's make localmodconfig now"
-            make ${BUILD_FLAGS[*]} LSMOD=$HOME/.config/modprobed.db localmodconfig
+            yes "" | make ${BUILD_FLAGS[*]} LSMOD=$HOME/.config/modprobed.db localmodconfig
         else
             echo "No modprobed.db data found"
             exit
