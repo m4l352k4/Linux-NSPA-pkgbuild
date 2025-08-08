@@ -153,24 +153,16 @@ prepare() {
     src="${src%%::*}"
     src="${src##*/}"
 
-    if [[ $src == "0999-cpu-Force-Enable-VMX-hack.patch" && $_vmx_hack == "y" ]]; then
-      echo "Applying patch $src..."
-      patch -Np1 < "../$src"
-    elif [[ $src == "201-sched-rt-Disable_RT_throttling-CFS-DL_Servers.patch" && $_no_RT_throttle == "y" ]]; then
-      echo "Applying patch $src..."
-      patch -Np1 < "../$src"
-    elif [[ $src == "0030-Microsoft_Surface_Support-6.12.patch" && $_config_Surface7 == "y" ]]; then
-      echo "Applying patch $src..."
-      patch -Np1 < "../$src"
-    elif [[ $src == "1116-kt-pm-suspend_patches.patch" && $_config_Surface7 == "y" ]]; then
-      echo "Applying patch $src..."
-      patch -Np1 < "../$src"
-    elif [[ $src == "1119-mm-compaction-Skip_all_non-migratable_pages_during_scan.patch" && $_config_Surface7 == "y" ]]; then
-      echo "Applying patch $src..."
-      patch -Np1 < "../$src"
-    elif [[ $src == "9999-sched_feat-compile-time.patch" && $_sched_feat_comp == "y" ]]; then
-      echo "Applying patch $src..."
-      patch -Np1 < "../$src"
+    if [[ $src == "0999-cpu-Force-Enable-VMX-hack.patch" && $_vmx_hack != "y" ]]; then
+      echo "Skipping patch $src..."
+    elif [[ $src == "0201-sched-rt-Disable_RT_throttling-CFS-DL_Servers.patch" && $_no_RT_throttle != "y" ]]; then
+      echo "Skipping patch $src..."
+    elif [[ $src == "0030-Microsoft_Surface_Support-6.14.patch" && $_config_Surface7 != "y" ]]; then
+      echo "Skipping patch $src..."
+    elif [[ $src == "1116-kt-pm-suspend_patches.patch" && $_config_Surface7 != "y" ]]; then
+      echo "Skipping patch $src..."
+    elif [[ $src == "9999-sched_feat-compile-time.patch" && $_sched_feat_comp != "y" ]]; then
+      echo "Skipping patch $src..."
     elif [[ $src == *.patch ]]; then
       # Apply other patches if they are present
       echo "Applying patch $src..."
